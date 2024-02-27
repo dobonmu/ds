@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+	Interphase by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>추억 저장소</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-xlarge.css">
+    </noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!-- 간단한 스타일링 -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .button-container {
+            margin-bottom: 10px;
+        }
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+        .image-container {
+            display: none;
+            max-width: 100%;
+            height: 200px;
+            text-align: center;
+        }
+        .image-container img {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 400px;
+            height: 400px;
+        }
+        .description {
+            display: none;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .hide-button {
+            background-color: #f44336;
+        }
+        .rotate-90 {
+        transform: rotate(-90deg);}
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <h1><a href="index.html">INHA D.S</a></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="elements.html">학생회기구표</a></li>
+            <li><a href="memory.html">추억저장소</a></li>
+
+            <li><a href="2023.html">2023년</a></li>
+            <li><a href="2024.html">2024년</a></li>
+
+
+        </ul>
+    </nav>
+</header>
+
+<!-- Main -->
+<section id="main" class="wrapper">
+    <div class="container">
+        <!-- 메인 버튼 -->
+     
+        <div class="button-container">
+            <button onclick="toggleContent('3')">3월</button>
+            <button onclick="toggleContent('4')">4월</button>
+            <button onclick="toggleContent('5')">5월</button>
+            <button onclick="toggleContent('6')">6월</button>
+
+
+        </div>
+    </div>
+        <!-- MT 이미지와 설명 -->
+        <div class="image-container" id="3">
+            
+            <img src="images\24ot.jpg" alt="MT Image 1">
+            <p>24학번 OT</p>
+            <img src="../images/KakaoTalk_20240209_204705017_02.jpg" alt="MT Image 2">
+           
+            
+            </div>
+            
+
+       
+    
+</section>
+
+<script>
+    var currentOpen = null;
+
+    function toggleContent(imagesId) {
+        var imagesToShow = document.getElementById(imagesId);
+
+        // 이미 열려있는 것이 있으면 숨기기
+        if (currentOpen) {
+            currentOpen.style.display = 'none';
+        }
+
+        // 이미 열려있는 것이 아니면 보이기
+        if (currentOpen !== imagesToShow) {
+            imagesToShow.style.display = 'block';
+            currentOpen = imagesToShow;
+        } else {
+            currentOpen = null; // 이미 열려있는 것이면 닫기
+        }
+    }
+</script>
+
+</body>
+</html>
