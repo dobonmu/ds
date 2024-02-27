@@ -1,143 +1,139 @@
 <!DOCTYPE html>
-><html lang="en"><head><meta charset="UTF-8"><title>추억 저장소</title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="description" content=""><meta name="keywords" content=""><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--><script src="js/jquery.min.js"></script><script src="js/skel.min.js"></script><script src="js/skel-layers.min.js"></script><script src="js/init.js"></script><noscript>
-			<link rel="stylesheet" href="css/skel.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/style-xlarge.css"></noscript><link rel="stylesheet" href="css/style.css"><!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]--></head><body>
+<!--
+	Interphase by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>추억 저장소</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-xlarge.css">
+    </noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!-- 간단한 스타일링 -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .button-container {
+            margin-bottom: 10px;
+        }
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+        .image-container {
+            display: none;
+            max-width: 100%;
+            height: 200px;
+            text-align: center;
+        }
+        .image-container img {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 400px;
+            height: 400px;
+        }
+        .description {
+            display: none;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .hide-button {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
 
-		<!-- Header -->
-			<header id="header"><h1><a href="index.html">INHA D.S</a></h1>
-				<nav id="nav"><ul><li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">추억 저장소</a></li>
-						<li><a href="elements.html">학생회기구표</a></li>
-					</ul></nav></header><!-- Main --><section id="main" class="wrapper"><div class="container">
+<!-- Header -->
+<header id="header">
+    <h1><a href="index.html">INHA D.S</a></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="generic.html">추억 저장소</a></li>
+            <li><a href="elements.html">학생회기구표</a></li>
+        </ul>
+    </nav>
+</header>
 
-						<!DOCTYPE html>
-						<html lang="en">
-						<head>
-							<meta charset="UTF-8">
-							<title>Show/Hide Images with Buttons</title>
-							<style>
-								/* 간단한 스타일링 */
-								body {
-									font-family: Arial, sans-serif;
-									margin: 20px;
-									padding: 20px;
-								}
-								h1 {
-									text-align: center;
-								}
-								.button-container {
-									margin-bottom: 10px;
-								}
-								.button-container button {
-									background-color: #4CAF50;
-									color: white;
-									padding: 10px 20px;
-									margin: 5px;
-									border: none;
-									cursor: pointer;
-									border-radius: 5px;
-								}
-								.button-container button:hover {
-									background-color: #45a049;
-								}
-								.image-container {
-									display: none;
-									max-width: 100%;
-									height: 200px;
-									text-align: center;
-								}
-								.image-container img {
-									margin-bottom: 10px;
-									border-radius: 5px;
-									width: 400px;
-									height: 400px;
-								}
-								.description {
-									display: none;
-									margin-bottom: 20px;
-									text-align: center;
-								}
-								.hide-button {
-									background-color: #f44336;
-								}
-							</style>
-						</head>
-						<body>
-							<h1>데이터사이언스학과 since~2021</h1>
-						
-							<!-- 메인 버튼 -->
-							<div class="button-container">
-								<button onclick="toggleButtons('mainButtons')">2023</button>
-							</div>
-						
-							<!-- 2023 버튼들 -->
-							<div class="button-container" id="mainButtons">
-								<button onclick="toggleImages('mtImages', 'mtDescription')">MT</button>
-								<button onclick="toggleImages('otImages', 'otDescription')">OT</button>
-							</div>
-						
-							<!-- MT 이미지와 설명 -->
-							<div class="image-container" id="mtImages">
-								<img src="KakaoTalk_20240209_204705017_01.jpg" alt="MT Image 1">
-								<div class="description" id="mtDescription">
-									<p>쥐불놀이 하는 최민규(23)</p>
-								</div>
-								<img src="KakaoTalk_20240209_204705017_02.jpg" alt="MT Image 2">
-								<div class="description" id="mtDescription">
-									<p>단체 쥐불놀이</p>
-								</div>
-							</div>
-						
-							<!-- OT 이미지와 설명 -->
-							<div class="image-container" id="otImages">
-								<img src="https://via.placeholder.com/400" alt="OT Image 1">
-								<div class="description" id="otDescription">
-									<p>OT 설명 1</p>
-								</div>
-								<img src="https://via.placeholder.com/400" alt="OT Image 2">
-								<div class="description" id="otDescription">
-									<p>OT 설명 2</p>
-								</div>
-							</div>
-						
-							<script>
-								function toggleButtons(buttonId) {
-									var buttonsContainer = document.getElementById(buttonId);
-									if (buttonsContainer.style.display === 'none' || buttonsContainer.style.display === '') {
-										buttonsContainer.style.display = 'block';
-									} else {
-										buttonsContainer.style.display = 'none';
-									}
-								}
-						
-								function toggleImages(imagesId, descriptionId) {
-									var imagesToShow = document.getElementById(imagesId);
-									var descriptionToShow = document.getElementById(descriptionId);
-									
-									var allImages = document.querySelectorAll('.image-container');
-									var allDescriptions = document.querySelectorAll('.description');
-						
-									// 모든 이미지와 설명을 숨김
-									allImages.forEach(function(imageContainer) {
-										imageContainer.style.display = 'none';
-									});
-									allDescriptions.forEach(function(desc) {
-										desc.style.display = 'none';
-									});
-						
-									// 해당 이미지와 설명을 보여주거나 숨김
-									if (imagesToShow && descriptionToShow) {
-										if (imagesToShow.style.display === 'none' || imagesToShow.style.display === '') {
-											imagesToShow.style.display = 'block';
-											descriptionToShow.style.display = 'block';
-										} else {
-											imagesToShow.style.display = 'none';
-											descriptionToShow.style.display = 'none';
-										}
-									}
-								}
-							</script>
-						</body>
-						</html>
-						
+<!-- Main -->
+<section id="main" class="wrapper">
+    <div class="container">
+        <!-- 메인 버튼 -->
+        <div class="button-container">
+            <button onclick="toggleContent('mtImages', 'mtDescription')">MT</button>
+            <button onclick="toggleContent('otImages', 'otDescription')">OT</button>
+        </div>
 
-	</body></html>
+        <!-- MT 이미지와 설명 -->
+        <div class="image-container" id="mtImages">
+            <img src="KakaoTalk_20240209_204705017_01.jpg" alt="MT Image 1">
+            <div class="description" id="mtDescription">
+                <p>쥐불놀이 하는 최민규(23학번)</p>
+                <img src="KakaoTalk_20240209_204705017_02.jpg" alt="MT Image 2">
+                <p>단체 쥐불놀이</p>
+            </div>
+        </div>
+
+        <!-- OT 이미지와 설명 -->
+        <div class="image-container" id="otImages">
+            <img src="https://via.placeholder.com/400" alt="OT Image 1">
+            <div class="description" id="otDescription">
+                <p>OT 설명 1</p>
+                <img src="https://via.placeholder.com/400" alt="OT Image 2">
+                <p>OT 설명 2</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var currentOpen = null;
+
+    function toggleContent(imagesId, descriptionId) {
+        var imagesToShow = document.getElementById(imagesId);
+        var descriptionToShow = document.getElementById(descriptionId);
+
+        // 이미 열려있는 것이 있는 경우 닫기
+        if (currentOpen) {
+            currentOpen.style.display = 'none';
+        }
+
+        // 현재 열린 것으로 설정하고 보이기
+        currentOpen = imagesToShow;
+        imagesToShow.style.display = 'block';
+        descriptionToShow.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
